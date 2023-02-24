@@ -13,13 +13,20 @@
   jieun = '천재';
   console.log(jieun);
 
-  function valueChange(a,b,c){
-    return a+b+c +"바보!"; // 함수를 생성한다 . 호출 전
-  }
-  
-  jieun = valueChange("홀쭉","님","안녕하세요!"); // 똑똑(리턴값) 호출
+  function valueChange(a,b,c){ //{}중괄호 = 영역 ( 다른 데이터가 침범하지 못한다.)
+    if(typeof(a) === "string"){
+      if(typeof(b) ==="string"){
+        if(typeof(c)==="string"){
+        return a+b+c +"짱!";// 함수를 생성한다 . 호출 전
+      }
+    }
+  } 
+}
+//if 문자열일때만 리턴
+  jieun = valueChange('정','지','은'); // (리턴값) 호출 , 직접 작성한 리터럴 값=불변
   console.log(jieun); //() 소괄호는 모두 함수이다.
 //객체에서 쓰는 속성 변수 = key , 함수릐 소괄호 사이에 들어가는 변수 매개변수
+//error 틀린 것 ,  bug 개발자의 의도를 벗어난 것 
   </script>
 </body>
 </html>
