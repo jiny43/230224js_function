@@ -13,18 +13,38 @@
   </div>
   <script>
     let root = document.getElementById('root');
-    function percentCalculator(realValue,totalValue){
-      let result = (realValue / totalValue) * 100;
-      return result + "%";
+    function percentCalculator(aValue,bValue,cValue){
+      let result = (aValue+bValue+cValue) / 3; 
+      return result +'입니다.'
     }
-
-    console.log(percentCalculator(20,100)); //20
+//평균값 구하기
+    console.log(percentCalculator(3,3,3)); 
     console.dir(root);
     
-    root.children[0].innerHTML = percentCalculator(20,100);
-    root.children[1].innerHTML = percentCalculator(44,36790);
-
-  
+    root.children[0].innerHTML = percentCalculator(3,3,3);
+    root.children[1].innerHTML = percentCalculator(30,30,30);
+    //5교시 예제 문제
   </script>
+  <h1>평균값</h1>
+
+<script>
+
+var arr = [4729,2735,1224,43];
+
+function solution(arr) {
+    var answer = 0;
+    let sum = 0;
+    
+    for (let i = 0; i < arr.length; i++){
+     sum += arr[i];   // 배열의 요소들을 하나씩 더한다.
+    }
+    return answer = sum / arr.length; // 더한 값과 배열의 길이(=요소 갯수)를 나눈다.
+}
+
+document.write(solution(arr)); 
+
+
+</script>
+
 </body>
 </html>
