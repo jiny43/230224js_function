@@ -49,14 +49,23 @@ document.write(solution(arr));
 <p> 주휴수당x</p>
 <script>
 
-function setMoney(dayTime,workDay,minMoney){
-  return re = (dayTime*workDay*minMoney);
+function setMoney(dayTime,workDays,minMoney){
+  return re = (dayTime*workDays*minMoney);
 }
-document.write(setMoney(5.5,8,9620)).style.color='blue';
-
-
+document.write(setMoney(5.5,8,9620));
 
 </script>
+<p> 주휴수당 O </p>
+<script>
+function setMoney(weektime,workweeks,minMoney){
+  if(weektime>15){
+     return 0.2*(weektime**2)*workweeks*minMoney //주휴수당 = 1주일 근무시간 × 시급 × 20%
+  }
+  else { return  weektime*workweeks*minMoney}
+} 
 
+document.write(setMoney(17,4,9620));
+
+</script>
 </body>
 </html>
